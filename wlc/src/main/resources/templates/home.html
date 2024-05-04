@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head th:replace="fragments/header :: header">
 	<title>WLC</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -7,18 +8,41 @@
 
 <body>
 
-<div class="container">
-	
-	<div th:replace="fragments/bodyHeader :: bodyHeader" />
-	
-	<div class="jumbotron">
-		<h1>Welcome!</h1>
+	<div class="container-xxl">
+
+		<div th:replace="fragments/bodyHeader :: bodyHeader" />
+
+		<!-- Carousel 적용 시작 -->
+
+		<div id="carouselExample" class="carousel slide">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="/images/carousel/car4.jpg" class="d-block w-100" alt="image1">
+				</div>
+				<div class="carousel-item">
+					<img src="/images/carousel/car2.jpg" class="d-block w-100" alt="image2">
+				</div>
+				<div class="carousel-item">
+					<img src="/images/carousel/car3.jpg" class="d-block w-100" alt="image3">
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+
+		<!-- Carousel 적용 끝 -->
 		
+		
+		<div th:replace="fragments/footer :: footer" />
+
 	</div>
 
-	<div th:replace="fragments/footer :: footer" />
-
-</div>
-
 </body>
+
 </html>

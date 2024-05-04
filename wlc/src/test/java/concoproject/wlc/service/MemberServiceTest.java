@@ -19,7 +19,7 @@ import jakarta.persistence.EntityManager;
 public class MemberServiceTest {
 	
 	@Autowired
-	private MemberService memberService;
+	private MemberService memberService;	
 	@Autowired
 	private EntityManager em;
 	
