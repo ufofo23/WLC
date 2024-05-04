@@ -26,5 +26,4 @@ public class Search {
 	@JoinColumn(name = "history_id")
 	private History history;
 	
-	private Long views;
 }

@@ -18,9 +18,11 @@ public class Car {
 	@Column(name = "car_id")
 	private Long id;
 	
-	private int price;
-	
 	private String name;
+	
+	private Long views;
+	
+	private int price;
 	
 	@OneToMany(mappedBy = "car")
 	private List<CategoryCar> categoryCars = new ArrayList<>();
