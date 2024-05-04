@@ -1,11 +1,22 @@
 <!DOCTYPE html>
-<html xmlns:th= "http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 <div class="header" th:fragment="bodyHeader">
-	<ul class="nav nav-pills pull-right">
-		<li><a href="/">Home</a></li>
+	<ul class="nav nav-pills pull-right justify-content-end">
+		<li><a href="/">Login</a></li>
 	</ul>
 	<div class="d-flex justify-content-center">
 		<a href="/"><h3 class="text-muted">Wanna Look for Cars</h3></a>
 	</div>
 	<!--  menu  -->
+	<ul class="nav nav-tabs">
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Search</a>
+			<ul class="dropdown-menu">
+				<li><a class="dropdown-item" href="#">By Name</a></li>
+				<li><a class="dropdown-item" href="#">Advanced</a></li>
+			</ul>
+		</li>
+		<li class="nav-item"><a class="nav-link" href="#">Recommend</a></li>
+		<li class="nav-item"><a class="nav-link" href="#">HOT</a></li>		
+	</ul>
 </div>
