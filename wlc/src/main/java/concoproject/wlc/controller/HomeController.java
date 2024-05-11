@@ -15,4 +15,10 @@ public class HomeController {
 		log.info("home controller");
 		return "home";
 	}
+	
+	@RequestMapping("/searchByName")
+	public String search() {
+		log.info("search controller");
+		return "searchByName";
+	}
 }

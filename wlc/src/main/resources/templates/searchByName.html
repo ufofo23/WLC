@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/header :: header">
+	<title>WLC</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<style>
+		.search {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+		}
+
+		.search_box {
+			border: 1px solid #dfe1e5;
+			border-radius: 24px;
+			padding: 10px 20px;
+			display: flex;
+			align-items: center;
+		}
+
+	</style>
+	
+</head>
+
+<body>
+
+	<div class="container-xxl">
+
+		<div th:replace="fragments/bodyHeader :: bodyHeader" />
+
+		<div class="search">
+			<div class="search_box">
+				<input type="search" placeholder="검색어를 입력하세요">
+				<button type="submit">검색</button>
+			</div>
+		</div>
+
+
+		<div th:replace="fragments/footer :: footer" />
+
+	</div>
+
+</body>
+
+</html>
