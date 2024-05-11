@@ -13,9 +13,9 @@
 	<!-- not login status -->	
 	<div th:unless="${session.id}">
 		<ul class="nav nav-pills pull-right justify-content-end">
-			<li><a href="/">Login</a></li>
+			<li><a href="/members/login">Login</a></li>
 			<li class="ms-2 me-2">|</li> 
-			<li><a href="/">Join</a></li>
+			<li><a href="/members/new">Join</a></li>
 		</ul>
 	</div>
 	

@@ -45,4 +45,9 @@ public class MemberService {
 		return memberRepository.findOne(id);
 	}
 	
+	// 이메일로 회원 찾기
+	public List<Member> findByEmail(String email) {
+		return memberRepository.findByEmail(email);
+	}
+	
 }

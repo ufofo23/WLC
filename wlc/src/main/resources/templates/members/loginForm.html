@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header">
+	<title>WLC</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+
+<div class="container">
+	<div th:replace="fragments/bodyHeader :: bodyHeader"></div>
+	
+	<h1 class="pb-3">Login</h1>
+	
+	<form role="form" action="/members/login" th:object="${loginForm}" method="post">
+		<div class="form-group">
+			<p>
+				<label th:for="email">EMAIL</label>
+				<input type="text" th:field="*{email}" class="form-control" placeholder="이메일을 입력하세요"
+				th:class="${#fields.hasErrors('email')}? 'form-control fieldError' : 'form-control'">
+					<p th:if="${#fields.hasErrors('email')}"
+				th:errors="*{email}">Incorrect email</p>
+			<p>
+				<label th:for="pw">PASSWORD</label>
+				<input type="password" th:field="*{pw}" class="form-control" placeholder="비밀번호를 입력하세요"
+				th:class="${#fields.hasErrors('pw')}? 'form-control fieldError' : 'form-control'">
+				<p th:if="${#fields.hasErrors('pw')}"
+				th:errors="*{pw}">Incorrect password</p>
+		</div>
+		<button type="submit" class="btn btn-primary">Login</button>
+	</form>
+	
+	<br/>
+	<div th:replace="fragments/footer :: footer"></div>
+</div>
+
+</body>
+</html>

@@ -25,7 +25,14 @@ public class Member {
 	
 	private String email;
 	
+	private String pw;
+	
 	@OneToMany(mappedBy = "member", cascade = CascadeType.REMOVE, orphanRemoval = true)
 	private List<History> histories = new ArrayList<>();
-	
+
+	public void createNewMember(String name, String email, String pw) {
+		this.name = name;
+		this.email = email;
+		this.pw = pw;
+	}
 }
