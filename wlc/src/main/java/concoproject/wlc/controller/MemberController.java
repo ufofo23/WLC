@@ -55,7 +55,7 @@ public class MemberController {
 			List<Member> findByEmail = memberService.findByEmail(form.getEmail());
 			
 			/* 
-			 * 단순 기능구현으로 수정 예정
+			 * 현재는 단순 기능구현으로 수정 예정
 			 */
 			if (!findByEmail.get(0).getPw().equals(form.getPw())){
 				System.out.println(findByEmail.get(0).getPw());
@@ -64,6 +64,10 @@ public class MemberController {
 			} else {
 				// 로그인 완료
 				System.out.println("success!!");
+				Long id = findByEmail.get(0).getId();
+				String name = findByEmail.get(0).getName();
+				String email = findByEmail.get(0).getEmail();
+				LoginedMember member = new LoginedMember(id, email, name);
 				return "redirect:/";
 			}
 		}

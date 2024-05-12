@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header">
+<title>WLC</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+
+	<div class="container-xxl">
+		<div th:replace="fragments/bodyHeader :: bodyHeader"></div>
+
+		<div class="flex-shrink-0 p-3 bg-white" style="width: 240px;">
+			<a href="/search/advanced"
+				class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+					<span class="fs-5 fw-semibold">Categories</span>
+			</a>
+			<ul class="list-unstyled ps-0">
+				<li class="mb-1">
+					<button class="btn btn-toggle align-items-center rounded collapsed"
+						data-bs-toggle="collapse" data-bs-target="#brand-collapse"
+						aria-expanded="true">Brand</button>
+					<div class="collapse show" id="brand-collapse">
+						<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+							<li><input type="checkbox" id="hyundai"><label
+								for="hyundai" class="link-dark rounded ms-1">Hyundai</label></li>
+							<li><input type="checkbox" id="kia"><label
+								for="kia" class="link-dark rounded ms-1">KIA</label></li>
+							<li><input type="checkbox" id="genesis"><label
+								for="genesis" class="link-dark rounded ms-1">Genesis</label></li>
+						</ul>
+					</div>
+				</li>
+				<li class="mb-1">
+					<button class="btn btn-toggle align-items-center rounded collapsed"
+						data-bs-toggle="collapse" data-bs-target="#fuel-collapse"
+						aria-expanded="true">Fuel</button>
+					<div class="collapse show" id="Fuel-collapse">
+						<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+							<li><input type="checkbox" id="gasoline"><label
+								for="gasoline" class="link-dark rounded ms-1">Gasoline</label></li>
+							<li><input type="checkbox" id="diesel"><label
+								for="diesel" class="link-dark rounded ms-1">Diesel</label></li>
+							<li><input type="checkbox" id="hybrid"><label
+								for="hybrid" class="link-dark rounded ms-1">Hybrid</label></li>
+							<li><input type="checkbox" id="electric"><label
+								for="electric" class="link-dark rounded ms-1">Electric</label></li>
+						</ul>
+					</div>
+				</li>
+				<li class="mb-1">
+					<button class="btn btn-toggle align-items-center rounded collapsed"
+						data-bs-toggle="collapse" data-bs-target="#orders-collapse"
+						aria-expanded="false">ETC</button>
+					<div class="collapse" id="orders-collapse">
+						<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+							<li><a href="#" class="link-dark rounded">...</a></li>
+							<li><a href="#" class="link-dark rounded">...</a></li>
+							<li><a href="#" class="link-dark rounded">...</a></li>
+							<li><a href="#" class="link-dark rounded">...</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<br />
+		<div th:replace="fragments/footer :: footer"></div>
+	</div>
+
+</body>
+</html>
