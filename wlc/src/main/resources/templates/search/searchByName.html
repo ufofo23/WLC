@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/header :: header">
+<title>WLC</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<style>
+
+</style>
+
+</head>
+
+<body>
+
+   <div class="container-xxl">
+
+      <div th:replace="fragments/bodyHeader :: bodyHeader" />
+
+
+      <form>
+         <div class="mx-auto mt-5 search-bar input-group mb-3">
+            <input name="search_bar" type="text" class="form-control rounded-pill" placeholder="원하시는 차종을 검색해주세요" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <div class="input-group-append"></div>
+         </div>
+      </form>
+
+      <div id="resultBox">
+		  <div style="height: 550px;">
+			  
+		  </div>
+      </div>
+
+      <div th:replace="fragments/footer :: footer" /></div>
+   </div>
+</body>
+
+</html>

@@ -19,6 +19,6 @@ public class HomeController {
 	@RequestMapping("/searchByName")
 	public String search() {
 		log.info("search controller");
-		return "searchByName";
+		return "search/searchByName";
 	}
 }
